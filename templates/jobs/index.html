@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+My Portfolio
+{% endblock title %}
+
+{% block content %}
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Milson Munakami</h1>
+        <p class="lead text-muted">Hi! My name is Milstein, I enjoy making apps and websites. Also, loves making
+            friends.</p>
+        <p>
+            <a href="mailto:milsonmun@gmail.com" class="btn btn-primary my-2">Email Me</a>
+        </p>
+        
+        <img src="{% static 'jobs/uploads/milstein.png' %}" alt="Milstein Munakami" height="500px">
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+
+            {% if jobs %}
+            {% for job in jobs %}
+                {% include 'jobs/partials/_card.html' %}
+            {% endfor %}
+            {% else %}
+                <p class="d-block font-weight-light my-2 heading">You have not saved any jobs yet!</p>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
