@@ -41,8 +41,6 @@ Above mentioned Virtual Environment creationg and requirements install is done o
 The following is done for every changes you make in you project:
 
 Run the migrations by running:
-	`python manage.py migrate`
-and then running:
 	`python manage.py makemigrations`
 	`python manage.py migrate`	
 	
